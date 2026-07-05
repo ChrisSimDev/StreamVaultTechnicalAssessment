@@ -1,0 +1,64 @@
+﻿@page "{id?}"
+@model StreamVaultTechnicalAssessment.Pages.ContentItemModel
+@using StreamVaultTechnicalAssessment.enums
+@{
+    ViewData["Title"] = "Content Item";
+}
+
+<div class="text-center">
+    @if (Model.Id == null)
+    {
+        <h1 class="display-4">Add Content</h1>
+
+        <form method="get" class="filter-container">
+            <label for="dropdown">Content Type:</label>
+
+            <select id="dropdown" name="contentType" onchange="this.form.submit()">
+                <option value="Movie" selected="@(Model.ContentType == ContentType.Movie)">Movie</option>
+                <option value="Series" selected="@(Model.ContentType == ContentType.Series)">Series</option>
+                <option value="Audiobook" selected="@(Model.ContentType == ContentType.Audiobook)">Audiobook</option>
+                <option value="MusicAlbum" selected="@(Model.ContentType == ContentType.MusicAlbum)">Music Album</option>
+            </select>
+        </form>
+    }
+    else
+    {
+        @* This avoids having to deal with handling changing the content type of an item *@
+        <h1 class="display-4">Edit Content</h1>
+        <p class="text-muted">Content Type: <strong>@Model.ContentType</strong></p>
+        <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to delete this item?');">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+        </form>
+    }
+
+
+    
+
+    <form method="post" class="text-start mx-auto" style="max-width: 500px;">
+        <input type="hidden" asp-for="ContentType" />
+
+        @switch (Model.ContentType)
+        {
+            case ContentType.Movie:
+                <partial name="_ContentBaseFields" for="Movie" />
+                <partial name="_MovieFields" for="Movie" />
+                break;
+            case ContentType.Series:
+                <partial name="_ContentBaseFields" for="Series" />
+                <partial name="_SeriesFields" for="Series" />
+                break;
+            case ContentType.Audiobook:
+                <partial name="_ContentBaseFields" for="Audiobook" />
+                <partial name="_AudiobookFields" for="Audiobook" />
+                break;
+            case ContentType.MusicAlbum:
+                <partial name="_ContentBaseFields" for="MusicAlbum" />
+                <partial name="_MusicAlbumFields" for="MusicAlbum" />
+                break;
+        }
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+</div>

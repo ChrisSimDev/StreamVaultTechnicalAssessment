@@ -1,0 +1,13 @@
+@model StreamVaultTechnicalAssessment.dtos.content.Series
+
+<div class="mb-3">
+    <label asp-for="TotalSeasons" class="form-label">Total Seasons</label>
+    <input asp-for="TotalSeasons" type="number" min="0" class="form-control" />
+    <span asp-validation-for="TotalSeasons" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="TotalEpisodes" class="form-label">Total Episodes</label>
+    <input asp-for="TotalEpisodes" type="number" min="0" class="form-control" />
+    <span asp-validation-for="TotalEpisodes" class="text-danger"></span>
+</div>

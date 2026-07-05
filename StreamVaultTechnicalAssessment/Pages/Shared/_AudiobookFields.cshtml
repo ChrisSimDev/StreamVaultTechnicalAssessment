@@ -1,0 +1,19 @@
+@model StreamVaultTechnicalAssessment.dtos.content.Audiobook
+
+<div class="mb-3">
+    <label asp-for="Author" class="form-label">Author</label>
+    <input asp-for="Author" class="form-control" />
+    <span asp-validation-for="Author" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Narrator" class="form-label">Narrator</label>
+    <input asp-for="Narrator" class="form-control" />
+    <span asp-validation-for="Narrator" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Duration_mins" class="form-label">Duration (minutes)</label>
+    <input asp-for="Duration_mins" type="number" min="0" class="form-control" />
+    <span asp-validation-for="Duration_mins" class="text-danger"></span>
+</div>

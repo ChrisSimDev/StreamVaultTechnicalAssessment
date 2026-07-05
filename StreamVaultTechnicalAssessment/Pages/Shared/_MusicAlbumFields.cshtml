@@ -1,0 +1,19 @@
+@model StreamVaultTechnicalAssessment.dtos.content.MusicAlbum
+
+<div class="mb-3">
+    <label asp-for="Artist" class="form-label">Artist</label>
+    <input asp-for="Artist" class="form-control" />
+    <span asp-validation-for="Artist" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="RecordLabel" class="form-label">Record Label</label>
+    <input asp-for="RecordLabel" class="form-control" />
+    <span asp-validation-for="RecordLabel" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="TrackCount" class="form-label">Track Count</label>
+    <input asp-for="TrackCount" type="number" min="0" class="form-control" />
+    <span asp-validation-for="TrackCount" class="text-danger"></span>
+</div>

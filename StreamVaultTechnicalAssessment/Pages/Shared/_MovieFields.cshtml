@@ -1,0 +1,13 @@
+@model StreamVaultTechnicalAssessment.dtos.content.Movie
+
+<div class="mb-3">
+    <label asp-for="Director" class="form-label">Director</label>
+    <input asp-for="Director" class="form-control" />
+    <span asp-validation-for="Director" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Duration_mins" class="form-label">Duration (minutes)</label>
+    <input asp-for="Duration_mins" type="number" min="0" class="form-control" />
+    <span asp-validation-for="Duration_mins" class="text-danger"></span>
+</div>

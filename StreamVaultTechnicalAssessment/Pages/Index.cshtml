@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@using StreamVaultTechnicalAssessment.enums
+@{
+    ViewData["Title"] = "List of Content";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Content List</h1>
+
+    <form method="get" class="filter-container">
+        <label for="dropdown">Content Type:</label>
+
+        @* I've manually written the options, this could be generated dynamically with a ToDisplayName method to better display the content types 
+        This is actually refreshing for every search, I've done this for simplicity.*@
+        <select id="dropdown" name="contentType" onchange="this.form.submit()">
+            <option value="" selected="@(Model.ContentType == null)">None</option>
+            <option value="Movie" selected="@(Model.ContentType == ContentType.Movie)">Movie</option>
+            <option value="Series" selected="@(Model.ContentType == ContentType.Series)">Series</option>
+            <option value="Audiobook" selected="@(Model.ContentType == ContentType.Audiobook)">Audiobook</option>
+            <option value="MusicAlbum" selected="@(Model.ContentType == ContentType.MusicAlbum)">Music Album</option>
+        </select>
+
+        <label for="searchTerm">Search:</label>
+        <input type="search" id="searchTerm" name="searchTerm" value="@Model.SearchTerm" placeholder="Search by title" />
+        <button type="submit">Search</button>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Content Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var content in Model.ContentList)
+            {
+                // Make the row clickable and navigate to the content item page by id
+                <tr style="cursor:pointer;" onclick="window.location.href='/ContentItem/@content.Id'">
+                    <td>@content.Id</td>
+                    <td>@content.Title</td>
+                    <td>@content.ContentType</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
