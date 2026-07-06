@@ -1,6 +1,4 @@
-﻿@page
-@model IndexModel
-@using StreamVaultTechnicalAssessment.enums
+@model ContentIndexViewModel
 @{
     ViewData["Title"] = "List of Content";
 }
@@ -11,7 +9,7 @@
     <form method="get" class="filter-container">
         <label for="dropdown">Content Type:</label>
 
-        @* I've manually written the options, this could be generated dynamically with a ToDisplayName method to better display the content types 
+        @* I've manually written the options, this could be generated dynamically with a ToDisplayName method to better display the content types
         This is actually refreshing for every search, I've done this for simplicity.*@
         <select id="dropdown" name="contentType" onchange="this.form.submit()">
             <option value="" selected="@(Model.ContentType == null)">None</option>
@@ -38,7 +36,7 @@
             @foreach (var content in Model.ContentList)
             {
                 // Make the row clickable and navigate to the content item page by id
-                <tr style="cursor:pointer;" onclick="window.location.href='/ContentItem/@content.Id'">
+                <tr style="cursor:pointer;" onclick="window.location.href='@Url.Action("Index", "ContentItem", new { id = content.Id })'">
                     <td>@content.Id</td>
                     <td>@content.Title</td>
                     <td>@content.ContentType</td>

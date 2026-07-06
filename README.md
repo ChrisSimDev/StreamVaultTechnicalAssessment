@@ -37,6 +37,9 @@ I went for an approach of passing search query parameters and the id through the
 This meant that for ui that would have to change based upon these parameters, e.g. the content list table, can update via a refresh only.
 This avoids having to handle script sections of the html that would be more difficult to follow
 
+I originally built the UI in Razor pages rather than MVC Razor views, and changed to better meet the design requirements.
+Given the low design complexity, this could be revisited as potential simplification of the code base.
+
 # What I'd do next time
 If this was going to production I would seek more information on the original premise. Does it make sense for all of the content types to be grouped together?
 e.g. focusing on the customer journey is the movie and series likely to overlap heavily with music and audiobook.
@@ -53,3 +56,5 @@ I would include additional filtering options with specific options available dep
 I could also include multi select approachs on the content type list, i.e. filter to just movies and series
 
 Currently the db connection is hard coded locally, it would be better to setup with environment variables to allow for a db running in a cloud container (e.g. RDS in AWS)
+
+Implement proper display for enums in the UI.
