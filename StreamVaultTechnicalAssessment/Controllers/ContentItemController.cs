@@ -13,6 +13,7 @@ public class ContentItemController(ContentAccessService contentAccessService) : 
     {
         var model = new ContentItemViewModel { Id = id, ContentType = contentType };
 
+        // if no id is provided we can assume this is a new content item
         if (string.IsNullOrEmpty(id))
         {
             return View(model);
