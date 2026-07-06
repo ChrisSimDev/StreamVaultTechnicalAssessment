@@ -45,11 +45,6 @@ public class ContentItemController(ContentAccessService contentAccessService) : 
     [HttpPost]
     public IActionResult Index(ContentItemViewModel model)
     {
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
-
         Content content = model.ContentType switch
         {
             ContentType.Movie => model.Movie,
@@ -58,6 +53,14 @@ public class ContentItemController(ContentAccessService contentAccessService) : 
             ContentType.MusicAlbum => model.MusicAlbum,
             _ => throw new InvalidOperationException("Unsupported content type")
         };
+
+        // Forced validation, unnused content models fail validation due to required properties
+        TryValidateModel(content, model.ContentType.ToString());
+
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
 
         // Null ids mean no id was provided, so we can assume new
         if (string.IsNullOrEmpty(model.Id))
