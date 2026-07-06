@@ -1,6 +1,6 @@
-using StreamVaultTechnicalAssessment.dtos.content;
+using StreamVaultTechnicalAssessment.DTOs.Content;
 
-namespace StreamVaultTechnicalAssessment.enums;
+namespace StreamVaultTechnicalAssessment.Enums;
 
 public enum ContentType
 {

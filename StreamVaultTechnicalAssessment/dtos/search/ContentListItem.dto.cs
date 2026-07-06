@@ -1,6 +1,6 @@
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.dtos.search;
+namespace StreamVaultTechnicalAssessment.DTOs.Search;
 
 public record ContentListItem(
     string Id, 

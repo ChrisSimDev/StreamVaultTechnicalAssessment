@@ -1,9 +1,9 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
-using StreamVaultTechnicalAssessment.dtos.content;
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.DTOs.Content;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.data;
+namespace StreamVaultTechnicalAssessment.Data;
 
 public class ContentDbContext(DbContextOptions<ContentDbContext> options) : DbContext(options)
 {

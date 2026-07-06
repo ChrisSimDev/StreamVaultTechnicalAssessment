@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using StreamVaultTechnicalAssessment.data;
+using StreamVaultTechnicalAssessment.Data;
 
 #nullable disable
 
@@ -17,7 +17,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
 
-            modelBuilder.Entity("StreamVaultTechnicalAssessment.dtos.content.Content", b =>
+            modelBuilder.Entity("StreamVaultTechnicalAssessment.DTOs.Content.Content", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
@@ -53,9 +53,9 @@ namespace StreamVaultTechnicalAssessment.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("StreamVaultTechnicalAssessment.dtos.content.Audiobook", b =>
+            modelBuilder.Entity("StreamVaultTechnicalAssessment.DTOs.Content.Audiobook", b =>
                 {
-                    b.HasBaseType("StreamVaultTechnicalAssessment.dtos.content.Content");
+                    b.HasBaseType("StreamVaultTechnicalAssessment.DTOs.Content.Content");
 
                     b.Property<string>("Author")
                         .IsRequired()
@@ -75,7 +75,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c4b7bdea-8d56-4aca-b757-d0c35c017b70",
+                            Id = "8435f185-895d-4028-b9a5-fc8ad8fde801",
                             AgeRating = "PG",
                             Description = "A marine biologist's memoir of survival and discovery in the world's deepest trenches.",
                             Genre = "Memoir",
@@ -87,7 +87,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         },
                         new
                         {
-                            Id = "5633468e-6d6a-4573-8d53-5439cbce0e88",
+                            Id = "3f86827a-0b05-4bfb-850f-5a4ef96475d6",
                             AgeRating = "PG-13",
                             Description = "A gripping mystery spanning three generations and one haunted house.",
                             Genre = "Mystery",
@@ -99,9 +99,9 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         });
                 });
 
-            modelBuilder.Entity("StreamVaultTechnicalAssessment.dtos.content.Movie", b =>
+            modelBuilder.Entity("StreamVaultTechnicalAssessment.DTOs.Content.Movie", b =>
                 {
-                    b.HasBaseType("StreamVaultTechnicalAssessment.dtos.content.Content");
+                    b.HasBaseType("StreamVaultTechnicalAssessment.DTOs.Content.Content");
 
                     b.Property<string>("Director")
                         .IsRequired()
@@ -117,7 +117,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d8968b1a-5dd2-425e-ab41-631925db4e51",
+                            Id = "d6c4c7bc-2049-4bc6-8b21-6fe063499c93",
                             AgeRating = "PG-13",
                             Description = "A stranded astronaut must decode a mysterious transmission before her oxygen runs out.",
                             Genre = "Sci-Fi",
@@ -128,7 +128,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         },
                         new
                         {
-                            Id = "671c4181-6612-44c1-9341-bb8b03916609",
+                            Id = "0e243aa2-532a-4cfc-b650-bfe6379fae0d",
                             AgeRating = "R",
                             Description = "A jazz musician uncovers a family secret during one unforgettable night in Havana.",
                             Genre = "Drama",
@@ -139,7 +139,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         },
                         new
                         {
-                            Id = "4d890de3-487a-4b1f-a34e-1358a3f74233",
+                            Id = "8a7f86df-9029-4ebd-903a-74e5e4579032",
                             AgeRating = "PG-13",
                             Description = "An elite squad races against time to stop a rogue AI from seizing control of a military satellite.",
                             Genre = "Action",
@@ -150,9 +150,9 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         });
                 });
 
-            modelBuilder.Entity("StreamVaultTechnicalAssessment.dtos.content.MusicAlbum", b =>
+            modelBuilder.Entity("StreamVaultTechnicalAssessment.DTOs.Content.MusicAlbum", b =>
                 {
-                    b.HasBaseType("StreamVaultTechnicalAssessment.dtos.content.Content");
+                    b.HasBaseType("StreamVaultTechnicalAssessment.DTOs.Content.Content");
 
                     b.Property<string>("Artist")
                         .IsRequired()
@@ -170,7 +170,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6f67ea92-e93d-43fb-bbd4-16f2e94de1b1",
+                            Id = "ef3c9098-a1f7-490d-8a36-ec1c8c02a80c",
                             AgeRating = "PG",
                             Description = "A synth-driven concept album exploring isolation in a hyperconnected world.",
                             Genre = "Electronic",
@@ -182,7 +182,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         },
                         new
                         {
-                            Id = "0b6b67ef-8e6b-4b7d-865b-d24c535cb071",
+                            Id = "03f06ba5-f69d-4d5c-b920-28f7e1d5345a",
                             AgeRating = "G",
                             Description = "An acoustic folk album recorded live across small towns in the American Midwest.",
                             Genre = "Folk",
@@ -194,9 +194,9 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         });
                 });
 
-            modelBuilder.Entity("StreamVaultTechnicalAssessment.dtos.content.Series", b =>
+            modelBuilder.Entity("StreamVaultTechnicalAssessment.DTOs.Content.Series", b =>
                 {
-                    b.HasBaseType("StreamVaultTechnicalAssessment.dtos.content.Content");
+                    b.HasBaseType("StreamVaultTechnicalAssessment.DTOs.Content.Content");
 
                     b.Property<int>("TotalEpisodes")
                         .HasColumnType("INTEGER");
@@ -209,7 +209,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3f7a409e-5933-48d2-913c-10ac1051b6d7",
+                            Id = "72683d93-31b5-44b1-8ed8-77e4d1fe92fd",
                             AgeRating = "TV-14",
                             Description = "Three generations of a family navigate secrets buried in a small coastal town.",
                             Genre = "Drama",
@@ -220,7 +220,7 @@ namespace StreamVaultTechnicalAssessment.Migrations
                         },
                         new
                         {
-                            Id = "fb379c2d-7970-4f0a-ae50-b61a36cff31e",
+                            Id = "594710ad-0b27-43fe-bcbd-75409e070014",
                             AgeRating = "TV-MA",
                             Description = "A crew of thieves exploits parallel timelines to pull off the ultimate heist.",
                             Genre = "Sci-Fi",

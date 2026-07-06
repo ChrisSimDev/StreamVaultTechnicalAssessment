@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using StreamVaultTechnicalAssessment.data;
-using StreamVaultTechnicalAssessment.dtos.content;
-using StreamVaultTechnicalAssessment.dtos.search;
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.Data;
+using StreamVaultTechnicalAssessment.DTOs.Content;
+using StreamVaultTechnicalAssessment.DTOs.Search;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.services;
+namespace StreamVaultTechnicalAssessment.Services;
 
 public class ContentAccessService(ContentDbContext context)
 {

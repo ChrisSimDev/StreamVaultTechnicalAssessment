@@ -1,7 +1,7 @@
-using StreamVaultTechnicalAssessment.dtos.search;
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.DTOs.Search;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.dtos.content;
+namespace StreamVaultTechnicalAssessment.DTOs.Content;
 
 public abstract class Content
 {

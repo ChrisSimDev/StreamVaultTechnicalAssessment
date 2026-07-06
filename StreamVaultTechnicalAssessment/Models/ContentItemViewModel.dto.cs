@@ -1,6 +1,7 @@
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.DTOs.Content;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.dtos.content;
+namespace StreamVaultTechnicalAssessment.Models;
 
 public class ContentItemViewModel
 {

@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using StreamVaultTechnicalAssessment.dtos.content;
-using StreamVaultTechnicalAssessment.enums;
-using StreamVaultTechnicalAssessment.services;
+using StreamVaultTechnicalAssessment.Models;
+using StreamVaultTechnicalAssessment.Enums;
+using StreamVaultTechnicalAssessment.Services;
+using StreamVaultTechnicalAssessment.DTOs.Content;
 
 namespace StreamVaultTechnicalAssessment.Controllers;
 

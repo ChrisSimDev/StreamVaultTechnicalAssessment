@@ -1,6 +1,6 @@
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.dtos.content;
+namespace StreamVaultTechnicalAssessment.DTOs.Content;
 
 public class Series : Content
 {

@@ -1,6 +1,7 @@
-using StreamVaultTechnicalAssessment.enums;
+using StreamVaultTechnicalAssessment.DTOs.Search;
+using StreamVaultTechnicalAssessment.Enums;
 
-namespace StreamVaultTechnicalAssessment.dtos.search;
+namespace StreamVaultTechnicalAssessment.Models;
 
 public class ContentIndexViewModel
 {

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using StreamVaultTechnicalAssessment.data;
-using StreamVaultTechnicalAssessment.services;
+using StreamVaultTechnicalAssessment.Data;
+using StreamVaultTechnicalAssessment.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
